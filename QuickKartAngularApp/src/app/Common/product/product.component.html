@@ -1,0 +1,18 @@
+<div style="text-align:center;">
+  <h1>List of Products</h1>
+  <div class="table-responsive">
+    <table class="table" style="border-collapse: collapse;width: 100%;" *ngIf="products else ShowMsg">
+      <tr style="background-color:rgba(220,230,242,1); font-size:16pt;">
+        <th style="text-align:center;padding: 8px">Product Ids</th>
+        <th style="text-align:center">Product Name</th>
+        <th style="text-align:center">Category Id</th>
+        <th style="text-align:center">Price</th>
+        <th style="text-align:center">Quantity Available</th>
+      </tr>
+      <tr *ngFor="let product of products" style="background-color:white"></tr>
+    </table>
+  </div>
+</div>
+<ng-template #ShowMsg>
+  <h4 class="jumbotron" style="text-align:center; font-size:22pt;background-color:rgba(220,230,242,1);">No products available</h4>
+</ng-template>
